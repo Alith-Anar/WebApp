@@ -1,0 +1,53 @@
+/*@font-face {*/
+/*    font-family: "benzin-regular";*/
+/*    src: url('templates/fonts/Benzin-Regular.ttf') format('ttf');*/
+/*}*/
+
+@font-face {
+    font-family: "benzin-regular";
+    src: url('//templates/fonts/font.woff2') format('woff2'),
+    url('//templates/fonts/font.woff') format('woff');
+}
+
+body {
+    font-family: benzin-regular;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 256px;
+    height: 100vh;
+    background: #F8F7F6;
+}
+
+.container {
+    height: calc(100vh - 64);
+    padding: 0 17px 0 21.5px;
+}
+
+.navbar > .container {
+    align-items: flex-start;
+}
+
+.navbar-nav .navbar-item {
+    width: 215px;
+    height: 40px;
+    background: #FFF066;
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px #F8F7F6;
+
+    font-family: benzin-regular;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+
+    color: #303030;
+}
+
+.navbar-item:hover {
+    box-shadow: 0 0 0 2.5px #F8F7F6,
+    0 0 0 4px #303030;
+}
