@@ -1,12 +1,12 @@
-/*@font-face {*/
-/*    font-family: "benzin-regular";*/
-/*    src: url('templates/fonts/Benzin-Regular.ttf') format('ttf');*/
-/*}*/
+@font-face {
+    font-family: "benzin-regular";
+    src: url('/templates/fonts/Benzin-Regular.ttf');
+}
 
 @font-face {
     font-family: "benzin-regular";
-    src: url('//templates/fonts/font.woff2') format('woff2'),
-    url('//templates/fonts/font.woff') format('woff');
+    src: url('/templates/fonts/font.woff2') format('woff2'),
+    url('/templates/fonts/font.woff') format('woff');
 }
 
 body {
@@ -21,33 +21,95 @@ body {
 }
 
 .container {
-    height: calc(100vh - 64);
+    height: calc(100vh - 48px);
     padding: 0 17px 0 21.5px;
+}
+
+.navbar-brand {
+    width: 223px;
+    height: 48px;
+    background: #CCCCCC;
+    border-radius: 32px;
 }
 
 .navbar > .container {
     align-items: flex-start;
 }
 
-.navbar-nav .navbar-item {
-    width: 215px;
-    height: 40px;
-    background: #FFF066;
-    border-radius: 20px;
-    box-shadow: 0 0 0 4px #F8F7F6;
-
-    font-family: benzin-regular;
+.nav-link {
+    height: 24px;
+    vertical-align: middle;
+    white-space: nowrap;
     text-decoration: none;
     font-style: normal;
     font-weight: 600;
     font-size: 11px;
     line-height: 24px;
     letter-spacing: 0.04em;
+    color: #303030;
+    padding: 8px 20px 8px 56px;
+}
 
+.nav-link:hover {
+    text-decoration: none;
     color: #303030;
 }
 
-.navbar-item:hover {
+.navbar-nav .nav-item{
+    margin-left: 4px;
+    width: 215px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px #F8F7F6;
+    transition: 0.15s;
+    position: relative;
+}
+
+.nav-item:hover {
+    background: #FFF066;
     box-shadow: 0 0 0 2.5px #F8F7F6,
     0 0 0 4px #303030;
 }
+
+.nav-item-all-products:before {
+    content: '';
+    background: url("../images/honey.svg") 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+}
+
+.nav-item-all-transactions {
+    margin-top: 23px;
+}
+
+.nav-item-all-transactions:before {
+    content: '';
+    background: url("../images/file.svg") 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+}
+
+.line-nav-top {
+    width: 224px;
+    height: 1px;
+    left: 16px;
+    top: 10px;
+    background: #CCCCCC;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #151515;
+}
+
+
