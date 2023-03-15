@@ -34,6 +34,7 @@ body {
 
 .navbar > .container {
     align-items: flex-start;
+    align-content: flex-start;
 }
 
 .nav-link {
@@ -52,6 +53,7 @@ body {
 
 .nav-link:hover {
     text-decoration: none;
+    font-weight: 600;
     color: #303030;
 }
 
@@ -101,6 +103,7 @@ body {
     left: 16px;
     top: 10px;
     background: #CCCCCC;
+    margin: 24px 0 32px 0;
 }
 
 .main {
