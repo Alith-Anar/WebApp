@@ -12,6 +12,7 @@
 body {
     font-family: benzin-regular;
     box-sizing: border-box;
+    width: 1440px;
 }
 
 .navbar {
@@ -111,6 +112,12 @@ body {
     margin-left: 32px;
 }
 
+.flex-header {
+    display: flex;
+    height: 56px;
+    margin: 0;
+}
+
 h1 {
     width: 193px;
     height: 30px;
@@ -132,6 +139,33 @@ p {
     letter-spacing: 0.04em;
     color: #808080;
     margin-top: 8px;
+}
+
+.add-transaction {
+    width: 240px;
+    height: 56px;
+    background: #FFF066;
+    border: 0;
+    border-radius: 32px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #303030;
+    white-space: nowrap;
+    padding: 18px 84px 14px 48px;
+    position: relative;
+    margin: 24px 32px 0 687px;
+}
+
+.add-transaction:after {
+    content: '';
+    background: url("../images/add.svg");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 172px;
 }
 
 .analysis-tab-content {
@@ -178,12 +212,108 @@ h2 {
     gap: 4px;
 }
 
-.flex-container div{
+.flex-container .box{
     margin-top: 16px;
     width: 208px;
     height: 84px;
     background: #F8F7F6;
     border-radius: 20px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #303030;
+}
+
+.box-title-link-container {
+    display: flex;
+}
+
+.flexbox-title {
+    width: 144px;
+    height: 24px;
+    display: inline-block;
+    margin: 16px 0 0 16px;
+    padding-top: 2px;
+    position: relative;
+}
+
+.img-link {
+    width: 24px;
+    height: 24px;
+    background: #303030;
+    border-radius: 50px;
+    margin: 16px 16px 0 8px;
+    position: relative;
+}
+
+.data {
+    font-size: 16px;
+    max-width: 160px;
+    width: auto;
+    height: 24px;
+    display: inline-block;
+    margin: 4px 4px 16px 16px;
+}
+
+.prefix {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #303030;
+}
+
+.img-link-clients:before {
+    content: '';
+    background: url("../images/user.svg") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.img-link-honey:before {
+    content: '';
+    background: url("../images/honey-white.svg") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.img-link-purchase:before {
+    content: '';
+    background: url("../images/arrow-circle-down-left.svg") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.img-link-sale:before {
+    content: '';
+    background: url("../images/arrow-circle-up-right.svg") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.img-link-money:before {
+    content: '';
+    background: url("../images/currency-dollar-circle.svg") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
 }
 
 .all-products-h2 {
@@ -214,7 +344,7 @@ h2 {
     border-radius: 16px;
     padding: 2px 8px 0 8px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 11px;
     line-height: 24px;
     letter-spacing: 0.04em;
@@ -226,11 +356,14 @@ h2 {
     margin-top: 40px;
 }
 
-.line-product-tab-table {
-    margin-top: 64px;
-    width: 1056px;
-    height: 1px;
-    left: 320px;
-    top: 388px;
-    background: #CCCCCC;
-}
+/*Параметри границь таблиці*/
+
+/*.line-product-tab-table {*/
+/*    margin-top: 64px;*/
+/*    width: 1056px;*/
+/*    height: 1px;*/
+/*    left: 320px;*/
+/*    top: 388px;*/
+/*    background: #CCCCCC;*/
+/*}*/
+
