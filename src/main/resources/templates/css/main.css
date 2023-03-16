@@ -367,3 +367,24 @@ h2 {
 /*    background: #CCCCCC;*/
 /*}*/
 
+.table-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #808080;
+}
+
+.table-body {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #303030;
+}
+
+.text-cell {
+    font-size: 12px;
+}
