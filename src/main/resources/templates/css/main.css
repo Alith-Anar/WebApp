@@ -9,10 +9,21 @@
     url('/templates/fonts/font.woff') format('woff');
 }
 
+@font-face {
+    font-family: "benzin-semibold";
+    src: url('/templates/fonts/Benzin-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "benzin-semibold";
+    src: url('/templates/fonts/fontSemibold.woff2') format('woff2'),
+    url('/templates/fonts/fontSemibold.woff') format('woff');
+}
+
 body {
     font-family: benzin-regular;
     box-sizing: border-box;
-    width: 1440px;
+    width: auto;
 }
 
 .navbar {
@@ -52,13 +63,16 @@ body {
     padding: 10px 20px 6px 56px;
 }
 
-.nav-link:hover {
+.nav-item{
+    white-space: nowrap;
     text-decoration: none;
+    font-style: normal;
     font-weight: 600;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
     color: #303030;
-}
-
-.navbar-nav .nav-item{
+    padding: 10px 20px 6px 56px;
     margin-left: 4px;
     width: 215px;
     height: 40px;
@@ -69,9 +83,24 @@ body {
 }
 
 .nav-item:hover {
+    font-family: benzin-semibold;
+    text-decoration: none;
+    font-weight: 600;
+    background: #F0EFEC;
+    box-shadow: 0 0 0 4px #F0EFEC;
+}
+
+.nav-item.active {
+    font-family: benzin-semibold;
+    text-decoration: none;
+    font-weight: 600;
     background: #FFF066;
     box-shadow: 0 0 0 2.5px #F8F7F6,
     0 0 0 4px #303030;
+}
+
+.hidden {
+    display: none;
 }
 
 .nav-item-all-products:before {
@@ -110,6 +139,7 @@ body {
 .main {
     padding: 0;
     margin-left: 32px;
+    flex: 1;
 }
 
 .flex-header {
@@ -156,7 +186,7 @@ p {
     white-space: nowrap;
     padding: 18px 84px 14px 48px;
     position: relative;
-    margin: 24px 32px 0 687px;
+    margin: 24px -32px 0 687px;
 }
 
 .add-transaction:after {
@@ -170,7 +200,7 @@ p {
 
 .analysis-tab-content {
     width: 1120px;
-    height: 756px;
+    height: 772px;
     border: 1.5px solid #303030;
     border-radius: 40px;
     padding: 32px;
@@ -356,24 +386,73 @@ h2 {
     margin-top: 40px;
 }
 
-/*Параметри границь таблиці*/
+.all-products-info-table {
+    width: 1056px;
+}
 
-/*.line-product-tab-table {*/
-/*    margin-top: 64px;*/
-/*    width: 1056px;*/
-/*    height: 1px;*/
-/*    left: 320px;*/
-/*    top: 388px;*/
-/*    background: #CCCCCC;*/
-/*}*/
-
-.table-header {
+.table-header th {
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
     line-height: 16px;
     letter-spacing: 0.04em;
     color: #808080;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #CCCCCC;
+    white-space: nowrap;
+}
+
+.number {
+    padding-left: 2px;
+    width: 16px;
+    padding-right: 38px;
+}
+
+.tbl-prod-name {
+    width: 68px;
+    padding-right: 178px;
+    padding-left: 0;
+}
+
+.price-per-kilo {
+    width: 114px;
+    padding-right: 128px;
+    padding-left: 0;
+}
+
+.value {
+    width: 47px;
+    padding-right: 183px;
+    padding-left: 0;
+}
+
+.total-price {
+    width: 68px;
+    padding-right: 72px;
+    padding-left: 0;
+}
+
+.more {
+    width: 151px;
+    padding-right: 0;
+    text-align: right;
+}
+
+.table-scroll-body {
+    width: 1072px;
+    height: 475px;
+    overflow-y: scroll;
+}
+
+.table-scroll-body::-webkit-scrollbar {
+    width: 8px;
+    margin-left: 8px;
+}
+
+.table-scroll-body::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 16px;
 }
 
 .table-body {
@@ -385,7 +464,44 @@ h2 {
     color: #303030;
 }
 
+td {
+    padding-top: 30px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #F8F7F6;
+}
+
+.tbody-num {
+    width: 40px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .text-cell {
     font-size: 12px;
     font-weight: 600;
+    padding-left: 8px;
+    width: 236px;
+}
+
+.tbody-price-per-kilo {
+    padding-left: 8px;
+    width: 236px;
+}
+
+.tbody-value {
+    width: 236px;
+    padding-left: 8px;
+}
+
+.tbody-total-price {
+    width: 236px;
+    padding-left: 8px;
+}
+
+.transactions-content {
+    width: 1120px;
+    height: 772px;
+    border: 1.5px solid #303030;
+    border-radius: 40px;
+    padding: 32px;
 }
