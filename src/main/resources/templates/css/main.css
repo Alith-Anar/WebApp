@@ -195,7 +195,7 @@ p {
     left: 172px;
 }
 
-.analysis-tab-content {
+.frame-content {
     width: 1120px;
     height: 772px;
     border: 1.5px solid #303030;
@@ -495,10 +495,7 @@ td {
     padding-left: 8px;
 }
 
-.transactions-content {
-    width: 1120px;
-    height: 772px;
-    border: 1.5px solid #303030;
-    border-radius: 40px;
-    padding: 32px;
-}
+/*all-transactions-tab*/
+
+
+
