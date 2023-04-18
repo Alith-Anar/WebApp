@@ -1,23 +1,23 @@
 @font-face {
     font-family: "benzin-regular";
-    src: url('/templates/fonts/Benzin-Regular.ttf');
+    src: url('../fonts/Benzin-Regular.ttf');
 }
 
 @font-face {
     font-family: "benzin-regular";
     src: url('/templates/fonts/font.woff2') format('woff2'),
-    url('/templates/fonts/font.woff') format('woff');
+    url('../fonts/font.woff') format('woff');
 }
 
 @font-face {
     font-family: "benzin-semibold";
-    src: url('/templates/fonts/Benzin-Semibold.ttf');
+    src: url('../fonts/Benzin-Semibold.ttf');
 }
 
 @font-face {
     font-family: "benzin-semibold";
-    src: url('/templates/fonts/fontSemibold.woff2') format('woff2'),
-    url('/templates/fonts/fontSemibold.woff') format('woff');
+    src: url('../fonts/fontSemibold.woff2') format('woff2'),
+    url('../fonts/fontSemibold.woff') format('woff');
 }
 
 body {
