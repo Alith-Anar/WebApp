@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebApp</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebApp</title>
 <!--
 /**
 * @license
@@ -21,9 +21,9 @@
 *
 */
 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+  </head>
 <body>
   <div class="page-wrapper row">
     <nav class="navbar col-lg-3">
@@ -114,58 +114,72 @@
               <table>
                 <tbody class="table-body">
                 <tr>
-                  <td class="tbody-num">001</td>
-                  <td class="text-cell">Соняшник</td>
-                  <td class="tbody-price-per-kilo">320.00 грн.</td>
-                  <td class="tbody-value">5 600 кг</td>
-                  <td class="tbody-total-price">179 200.00 грн.</td>
+                  <td class="tbody-num">[[${honey.id}]]</td>
+                  <td class="text-cell">[[${honey.name}]]</td>
+                  <td class="tbody-price-per-kilo">[[${honey.sellPrice}]] грн.</td>
+                  <td class="tbody-value">[[${honey.value}]] кг</td>
+                  <td class="tbody-total-price">[[${honey.totalPrice}]] грн.</td>
                 </tr>
-                <tr>
-                  <td class="tbody-num">002</td>
-                  <td class="text-cell">Рапс</td>
-                  <td class="tbody-price-per-kilo">320.00</td>
-                  <td class="tbody-value">5 600 кг</td>
-                  <td class="tbody-total-price">179 200.00 грн.</td>
-                </tr>
-                <tr>
-                  <td class="tbody-num">003</td>
-                  <td class="text-cell">Різнотра'я</td>
-                  <td class="tbody-price-per-kilo">560.00 грн.</td>
-                  <td class="tbody-value">7 880 кг</td>
-                  <td class="tbody-total-price">4 412 800.00 грн.</td>
-                </tr>
-                <tr>
-                  <td class="tbody-num">004</td>
-                  <td class="text-cell">Польовий</td>
-                  <td class="tbody-price-per-kilo">320.00 грн.</td>
-                  <td class="tbody-value">5 600 кг</td>
-                  <td class="tbody-total-price">179 200.00 грн.</td>
-                </tr>
-                <tr>
-                  <td class="tbody-num">005</td>
-                  <td class="text-cell">Конюшиновий</td>
-                  <td class="tbody-price-per-kilo">320.00 грн.</td>
-                  <td class="tbody-value">5 600 кг</td>
-                  <td class="tbody-total-price">179 200.00 грн.</td>
-                </tr>
-                <tr>
-                  <td class="tbody-num">006</td>
-                  <td class="text-cell">Липовий</td>
-                  <td class="tbody-price-per-kilo">600.00 грн.</td>
-                  <td class="tbody-value">700 кг</td>
-                  <td class="tbody-total-price">420 000.00 грн.</td>
-                </tr>
-                <tr>
-                  <td class="tbody-num">007</td>
-                  <td class="text-cell">Гречаний</td>
-                  <td class="tbody-price-per-kilo">200.00 грн.</td>
-                  <td class="tbody-value">700 кг</td>
-                  <td class="tbody-total-price">140 000.00 грн.</td>
-                </tr>
+<!--                <tr>-->
+<!--                  <td class="tbody-num">001</td>-->
+<!--                  <td class="text-cell">Соняшник</td>-->
+<!--                  <td class="tbody-price-per-kilo">320.00 грн.</td>-->
+<!--                  <td class="tbody-value">5 600 кг</td>-->
+<!--                  <td class="tbody-total-price">179 200.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">002</td>-->
+<!--                  <td class="text-cell">Ріпак</td>-->
+<!--                  <td class="tbody-price-per-kilo">320.00</td>-->
+<!--                  <td class="tbody-value">5 600 кг</td>-->
+<!--                  <td class="tbody-total-price">179 200.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">003</td>-->
+<!--                  <td class="text-cell">Різнотра'я</td>-->
+<!--                  <td class="tbody-price-per-kilo">560.00 грн.</td>-->
+<!--                  <td class="tbody-value">7 880 кг</td>-->
+<!--                  <td class="tbody-total-price">4 412 800.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">004</td>-->
+<!--                  <td class="text-cell">Польовий</td>-->
+<!--                  <td class="tbody-price-per-kilo">320.00 грн.</td>-->
+<!--                  <td class="tbody-value">5 600 кг</td>-->
+<!--                  <td class="tbody-total-price">179 200.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">005</td>-->
+<!--                  <td class="text-cell">Конюшиновий</td>-->
+<!--                  <td class="tbody-price-per-kilo">320.00 грн.</td>-->
+<!--                  <td class="tbody-value">5 600 кг</td>-->
+<!--                  <td class="tbody-total-price">179 200.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">006</td>-->
+<!--                  <td class="text-cell">Липовий</td>-->
+<!--                  <td class="tbody-price-per-kilo">600.00 грн.</td>-->
+<!--                  <td class="tbody-value">700 кг</td>-->
+<!--                  <td class="tbody-total-price">420 000.00 грн.</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                  <td class="tbody-num">007</td>-->
+<!--                  <td class="text-cell">Гречаний</td>-->
+<!--                  <td class="tbody-price-per-kilo">200.00 грн.</td>-->
+<!--                  <td class="tbody-value">700 кг</td>-->
+<!--                  <td class="tbody-total-price">140 000.00 грн.</td>-->
+<!--                </tr>-->
                 </tbody>
               </table>
             </div>
           </div>
+        </div>
+
+<!--        add sort form-->
+        <div class="add_sort">
+          <form class="add_honey_form">
+
+          </form>
         </div>
 
 <!--        all transactions tab-->
@@ -302,7 +316,7 @@
     </main>
   </div>
 
-  <script src="js/main.js"></script>
+  <script th:src="@{js/main.js}"></script>
 
 </body>
 </html>
